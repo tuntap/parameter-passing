@@ -8,12 +8,16 @@
 
 ;;; TODO: Jensen's device is pretty weird because the index parameter that's
 ;;; passed by name is also replaced within the part of the for loop that
-;;; introduces the name of the counter variable. This is weird because this is
-;;; normally not a position that's normally "evaluated" and is part of the
-;;; syntax of the for loop.
+;;; introduces the name of the counter variable. This is normally not a that's
+;;; "evaluated" and is instead just part of the syntax of the for loop.
 ;;;
-;;; Is the substitution (copy) rule really defined textually and not in a "macro
-;;; way"?
+;;; Is ALGOL's substitution (copy) rule really defined completely "textually",
+;;; without differentiating whether something is an expression to be evaluated
+;;; vs. a "name" ("part of the syntax")?
+;;;
+;;; In our example we have to manually introduce the counter variable outside of
+;;; the SUM function and explicitly pass it in by name as the first argument.
+;;; This is something that the original Jensen's device doesn't have to do.
 
 ;;; Jensen's device
 
